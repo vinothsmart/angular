@@ -12,23 +12,21 @@ export class UserComponent {
   @Input({
     required: true,
   })
-  id!: string;
-  @Input({
-    required: true,
-  })
-  avatar!: string;
-  @Input({
-    required: true,
-  })
-  name!: string;
+  user!: {
+    id: string;
+    avatar: string;
+    name: string;
+  };
 
   @Output() select = new EventEmitter<string>();
 
   get imagePath() {
-    return 'assets/users/' + this.avatar || DUMMY_USERS[randomIndex()].avatar;
+    return (
+      'assets/users/' + this.user.avatar || DUMMY_USERS[randomIndex()].avatar
+    );
   }
 
   onUserClick() {
-    this.select.emit(this.id);
+    this.select.emit(this.user.id);
   }
 }
