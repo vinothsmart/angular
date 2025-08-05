@@ -13,4 +13,8 @@ export class UserComponent {
   get imagePath() {
     return `assets/users/${this.selectedUser.avatar}`;
   }
+  onUserClick() {
+    this.selectedUser = DUMMY_USERS[randomIndex()];
+    console.log('User changed to:', this.selectedUser.name);
+  }
 }
