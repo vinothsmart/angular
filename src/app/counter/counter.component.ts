@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class CounterComponent {
   count = 0;
+  increment() {
+    this.count++;
+  }
+  decrement() {
+    if (this.count > 0)
+      // Prevent negative count
+      this.count--;
+  }
 }
