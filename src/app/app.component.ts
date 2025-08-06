@@ -8,6 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  imageURL = 'https://picsum.photos/200/300?waterfalls';
-  imageAlt = 'Nature Image';
+  title = 'Welcome to My Angular App';
 }
