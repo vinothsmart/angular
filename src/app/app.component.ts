@@ -9,4 +9,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Welcome to My Angular App';
+
+  getName() {
+    return 'Vinoth Kanna';
+  }
 }
