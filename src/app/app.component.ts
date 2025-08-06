@@ -8,8 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  user = {
-    name: 'Vinoth Kanna',
-    age: 35,
-  };
+  user: any = null;
 }
