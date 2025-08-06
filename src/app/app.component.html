@@ -1,4 +1,14 @@
-<h1>ngFor Example</h1>
+<!--Index-->
+<h3>Index</h3>
 <ul>
-  <li *ngFor="let movie of movies">{{ movie }}</li>
+  <li *ngFor="let fruit of fruits; let i = index">{{ i + 1 }}. {{ fruit }}</li>
+</ul>
+
+<!--First and Last Fruits-->
+<h3>First and Last Fruits</h3>
+<ul>
+  <li *ngFor="let fruit of fruits; let isFirst = first; let isLast = last">
+    <strong>{{ isFirst ? "First" : isLast ? "Last" : "" }}</strong> Fruit:
+    {{ fruit }}
+  </li>
 </ul>

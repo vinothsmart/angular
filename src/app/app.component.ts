@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  movies = ['Inception', 'Interstellar', 'The Dark Knight'];
+  fruits = ['Apple', 'Banana', 'Cherry'];
 }
