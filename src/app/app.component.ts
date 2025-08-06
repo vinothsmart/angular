@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -7,13 +7,9 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
-  user: any = null;
-
-  ngOnInit() {
-    this.user = {
-      name: 'Vinoth Kanna',
-      age: 35,
-    };
+export class AppComponent {
+  count = 0;
+  onClick() {
+    this.count++;
   }
 }
