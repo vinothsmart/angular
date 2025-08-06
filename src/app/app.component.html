@@ -8,7 +8,8 @@
 <h3>First and Last Fruits</h3>
 <ul>
   <li *ngFor="let fruit of fruits; let isFirst = first; let isLast = last">
-    <strong>{{ isFirst ? "First" : isLast ? "Last" : "" }}</strong> Fruit:
+    <strong *ngIf="isFirst">First</strong>
+    <strong *ngIf="isLast">Last</strong> Fruit:
     {{ fruit }}
   </li>
 </ul>
