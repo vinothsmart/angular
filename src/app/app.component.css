@@ -1,7 +1,9 @@
-.even-item {
-  background-color: green;
+.primary {
+  color: red;
 }
-
-.odd-item {
-  background-color: red;
+.big {
+  font-size: 40px;
+}
+.italic {
+  font-style: italic;
 }
