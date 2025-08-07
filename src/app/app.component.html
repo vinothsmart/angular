@@ -13,3 +13,14 @@
     {{ fruit }}
   </li>
 </ul>
+
+<!--Odd and Even Fruits-->
+<h3>Odd and Even Fruits</h3>
+<ul>
+  <li
+    *ngFor="let fruit of fruits; let isEven = even; let isOdd = odd"
+    [ngClass]="{ 'even-item': isEven, 'odd-item': isOdd }"
+  >
+    {{ fruit }}
+  </li>
+</ul>
