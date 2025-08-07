@@ -1,2 +1,3 @@
-<input type="checkbox" [(ngModel)]="applyRed" /> Apply Red
-<p [ngClass]="{ primary: applyRed, secondary: false }">Sample Text</p>
+<p [ngStyle]="{ color: 'red', 'font-size': '40px', 'font-style': 'italic' }">
+  Sample Text
+</p>
