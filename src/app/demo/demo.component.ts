@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { HighlightDirective } from '../highlight.directive';
 
 @Component({
   selector: 'app-demo',
-  imports: [],
+  imports: [HighlightDirective],
   templateUrl: './demo.component.html',
-  styleUrl: './demo.component.css'
+  styleUrl: './demo.component.css',
 })
-export class DemoComponent {
-
-}
+export class DemoComponent {}
