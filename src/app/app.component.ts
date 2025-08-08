@@ -11,8 +11,8 @@ import { ListComponent } from './list/list.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  carList: string[] = [];
-  onCarAdded(carName: string) {
-    this.carList.push(carName);
-  }
+  // carList: string[] = [];
+  // onCarAdded(carName: string) {
+  //   this.carList.push(carName);
+  // }
 }
