@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,8 +10,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormComponent {
   carName: string = '';
+  @Output() carAdded = new EventEmitter<string>();
+
   onSubmit() {
-    console.log('Form submitted:', this.carName);
+    this.carAdded.emit(this.carName);
     this.carName = ''; // Reset the form field after submission
   }
 }

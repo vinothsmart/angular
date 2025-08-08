@@ -11,6 +11,8 @@ import { ListComponent } from './list/list.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Welcome to Angular';
-  price = 340;
+  carList: string[] = [];
+  onCarAdded(carName: string) {
+    this.carList.push(carName);
+  }
 }
