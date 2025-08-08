@@ -10,6 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'augular-directive';
-  toDate = new Date();
+  title = 'Hello World';
 }
