@@ -1,2 +1,4 @@
-<p>default text: {{ title }}</p>
-<p>getting hello: {{ title | slice : 0 : 5 }}</p>
+<h2>Item list</h2>
+<ul>
+  <li *ngFor="let item of items | slice : 0 : 3">{{ item }}</li>
+</ul>

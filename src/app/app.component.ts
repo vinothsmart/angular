@@ -11,4 +11,5 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'Hello World';
+  items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
 }
