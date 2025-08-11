@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { ChildComponent } from './child/child.component';
+import { Component, DoCheck } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [ChildComponent, FormsModule],
+  imports: [FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
-  message = '';
-  ngOnInit(): void {
-    this.message = 'ngOnInit hook executed';
+export class AppComponent implements DoCheck {
+  title = 'Vinoth';
+  prevTitle = 'Vinoth';
+
+  ngDoCheck(): void {
+    console.log('ngDoCheck hook executed');
+    if (this.title !== this.prevTitle) {
+      console.log('Title changed:', this.title);
+      this.prevTitle = this.title;
+    }
   }
 }
