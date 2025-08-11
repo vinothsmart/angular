@@ -8,10 +8,14 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 })
 export class ChildComponent implements OnChanges {
   @Input() items: any[] = [];
+  @Input() title: string = '';
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['items']) {
       console.log('Items changed:', changes['items']);
+    }
+    if (changes['title']) {
+      console.log('Title changed:', changes['title'].isFirstChange);
     }
   }
 }

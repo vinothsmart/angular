@@ -31,4 +31,5 @@ export class AppComponent {
       name: 'Elderberry',
     },
   ];
+  title = 'Hello World';
 }
