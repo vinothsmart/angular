@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ChildComponent } from './child/child.component';
 import { FormsModule } from '@angular/forms';
 
@@ -8,28 +8,9 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  itemList = [
-    {
-      id: 1,
-      name: 'Apple',
-    },
-    {
-      id: 2,
-      name: 'Banana',
-    },
-    {
-      id: 3,
-      name: 'Cherry',
-    },
-    {
-      id: 4,
-      name: 'Date',
-    },
-    {
-      id: 5,
-      name: 'Elderberry',
-    },
-  ];
-  title = 'Hello World';
+export class AppComponent implements OnInit {
+  message = '';
+  ngOnInit(): void {
+    this.message = 'ngOnInit hook executed';
+  }
 }
