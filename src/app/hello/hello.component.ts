@@ -1,17 +1,35 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-hello',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './hello.component.html',
   styleUrl: './hello.component.css',
 })
-export class HelloComponent implements AfterViewInit {
-  // focus on the input field
-  @ViewChild('nameInput') nameInput!: ElementRef;
+export class HelloComponent implements OnInit, OnDestroy {
+  counter = 0;
+  private intervalId: any;
 
-  ngAfterViewInit() {
-    this.nameInput.nativeElement.focus();
-    console.log('Input focused');
+  //starts the timer
+  ngOnInit(): void {
+    this.intervalId = setInterval(() => {
+      this.counter++;
+    }, 1000);
+    console.log('Timer started', this.intervalId);
+  }
+
+  // ends the timer
+  ngOnDestroy(): void {
+    clearInterval(this.intervalId);
+    console.log('Timer stopped');
   }
 }
