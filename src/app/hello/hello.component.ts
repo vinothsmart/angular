@@ -24,7 +24,7 @@ export class HelloComponent implements OnInit, OnDestroy {
     this.intervalId = setInterval(() => {
       this.counter++;
     }, 1000);
-    console.log('Timer started', this.intervalId);
+    console.log('Timer started Invertal ID', this.intervalId);
   }
 
   // ends the timer
